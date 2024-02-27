@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="downloads">
+    <div class="text-4xl mt-8 font-bold text-cyan-800 text-center">Downloads</div>
+    <div class="p-4 m-2">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                {% for item in downloads %}
+               
+                <div class="bg-gray-200 w-1/4 mx-4 rounded-xl p-8 md:h-screen/6 flex items-center">
+                    <div class="">
+                        <p class="text-lg font-bold mb-2">{{item.title}}</p>
+                        <p class="text-gray-700">{{item.content}}</p><br>
+                        <a class="bg-green-800 text-white text-xl p-2 rounded-lg" download="{{item.image}}" href="http://localhost:8000/media/{{item.image}}">Download</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    input, select {
+        padding: 4px;
+    }
+</style>
+
+<div class="intro m-4 text-black text-4xl ml-16  text-center text-cyan-800  font-bold ">Admission form</div>
+
+<form action="#" method="POST" class="max-w-2xl mx-auto">
+    <div class="flex flex-wrap -mx-2 mb-4">
+        <div class="w-full md:w-1/3 px-2">
+            <label for="firstName" class="block">First Name</label>
+            <input type="text" id="firstName" name="firstName" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+        </div>
+        <div class="w-full md:w-1/3 px-2">
+            <label for="middleName" class="block">Middle Name</label>
+            <input type="text" id="middleName" name="middleName" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+        </div>
+        <div class="w-full md:w-1/3 px-2">
+            <label for="lastName" class="block">Last Name</label>
+            <input type="text" id="lastName" name="lastName" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+        </div>
+    </div>
+    <div class="flex flex-wrap -mx-2 mb-4">
+        <div class="w-full md:w-1/2 px-2">
+            <label for="dob" class="block">Date of Birth (YYYY-MM-DD) (AD)</label>
+            <input type="text" id="dob" name="dob" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+        </div>
+        <div class="w-full md:w-1/2 px-2">
+            <label for="nepaliDate" class="block">Date of Birth  (BS)</label>
+            <input type="text" id="nepaliDate" name="nepaliDate" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <label for="gender" class="block">Gender</label>
+        <div>
+            <label class="inline-flex items-center">
+                <input type="radio" id="male" name="gender" value="male" class="border border-gray-300 rounded focus:ring-cyan-500 focus:border-cyan-500">
+                <span class="ml-2">Male</span>
+            </label>
+            <label class="inline-flex items-center ml-6">
+                <input type="radio" id="female" name="gender" value="female" class="border border-gray-300 rounded focus:ring-cyan-500 focus:border-cyan-500">
+                <span class="ml-2">Female</span>
+            </label>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="address" class="block">Address</label>
+        <input type="text" id="address" name="address" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+    </div>
+    <div class="mb-4">
+        <label for="grade" class="block">Admission for Grade</label>
+        <select id="grade" name="grade" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+            <option value="selectClass">Select Class</option>
+            <option value="grade1">Grade 1</option>
+            <option value="grade2">Grade 2</option>
+            <!-- Add other grade options -->
+        </select>
+    </div>
+    <div class="mb-4">
+        <label for="lastSchool" class="block">Name of the school last attended</label>
+        <input type="text" id="lastSchool" name="lastSchool" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+    </div>
+    <!-- Father's Information -->
+    <div class="mb-4">
+        <h2 class="text-lg mb-2">Father's Information</h2>
+        <div class="flex flex-wrap -mx-2">
+            <div class="w-full md:w-1/2 px-2">
+                <label for="fatherFullName" class="block">Full Name</label>
+                <input type="text" id="fatherFullName" name="fatherFullName" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+            </div>
+            <div class="w-full md:w-1/2 px-2">
+                <label for="fatherMobile" class="block">Mobile Number</label>
+                <input type="text" id="fatherMobile" name="fatherMobile" class="w-full border border-gray-300 rounded-md focus:ring-cyan-500 focus:border-cyan-500">
+            </div>
+            <!-- Add other fields for father's information -->
+        </div>
+    </div>
+    <!-- Add sections for Mother's Information, Local Guardian/Contact Person, Services, Medical Information, and Agreement -->
+    <div class="text-center mb-4">
+        <button type="submit" class="px-4 py-2 bg-cyan-600 text-white rounded-md hover:bg-cyan-700">Submit</button>
+    </div>
+</form>
+
+
+
+{% endblock content %}

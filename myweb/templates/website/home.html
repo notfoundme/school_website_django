@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="">
+    <div class="image">
+
+        <img class="w-[100vw] h-[40vw]" style="object-fit:fill"
+            src="https://veda-app.s3.ap-south-1.amazonaws.com/assets/118/gallery/2023-07-04/EF3OJgSohmtOYDSQ-1688458305.jpg" alt="">
+    </div>
+
+    <div class="features">
+
+        <div class=" text-4xl mt-8 font-bold text-cyan-800 text-center ">Our Courses</div>
+        <div class=" p-4 m-2">
+
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4">
+
+                    {% for item in courseList %}
+
+
+
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="http://localhost:8000/media/{{item.image}}" alt="Placeholder Image"
+                                class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <p class="text-lg font-bold mb-2">{{item.title}}</p>
+                                <p class="text-gray-700">
+                                    {{item.content}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                    {% endfor %}
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="msg">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <!-- Left Column -->
+
+                <div class="w-full md:w-2/3 px-4 mb-8">
+                    <div class=" text-3xl font-semibold">Welcome to </div>
+                    <div class=" text-5xl mb-2 font-bold text-cyan-800">AIMS College</div>
+                    <p class="text-gray-700">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget ex vel felis vehicula
+                        placerat. Integer ut tellus nec dolor porta mollis. Ut euismod felis et lacus lobortis
+                        dignissim. Pellentesque vel aliquam justo. Mauris in urna nisl. Ut fringilla, ligula vitae
+                        consequat consectetur, justo leo fringilla lacus, et fringilla ipsum turpis eu eros. Nullam sit
+                        amet volutpat velit. Curabitur tincidunt magna non nibh sollicitudin, vel malesuada velit
+                        vehicula.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget ex vel felis vehicula
+                        placerat. Integer ut tellus nec dolor porta mollis. Ut euismod felis et lacus lobortis
+                        dignissim. Pellentesque vel aliquam justo. Mauris in urna nisl. Ut fringilla, ligula vitae
+                        consequat consectetur, justo leo fringilla lacus, et fringilla ipsum turpis eu eros. Nullam sit
+                        amet volutpat velit. Curabitur tincidunt magna non nibh sollicitudin, vel malesuada velit
+                        vehicula.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget ex vel felis vehicula
+                        placerat. Integer ut tellus nec dolor porta mollis. Ut euismod felis et lacus lobortis
+                        dignissim. Pellentesque vel aliquam justo. Mauris in urna nisl. Ut fringilla, ligula vitae
+                        consequat consectetur, justo leo fringilla lacus, et fringilla ipsum turpis eu eros. Nullam sit
+                        amet volutpat velit. Curabitur tincidunt magna non nibh sollicitudin, vel malesuada velit
+                        vehicula.
+                    </p>
+                </div>
+                <!-- Right Column -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-cyan-800 rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150" alt="Principal Photo"
+                            class="w-full h-60 object-cover">
+                        <div class="p-4">
+                            <p class="text-white text-lg font-bold mb-2">Principal Name</p>
+                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="details">
+        
+
+        <div class=" text-4xl mt-8 font-bold text-cyan-800 text-center ">Details</div>
+        <div class=" p-4 m-2">
+
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="	https://kavya.edu.np/images/website/admission.jpg" alt="Placeholder Image"
+                                class="w-full h-60 object-cover">
+                            <div class="p-4">
+                                <p class="text-xl font-bold mb-2">Admission</p>
+                                <p class="text-gray-700">Admission is largely based on merits, a proven academic
+                                    success, the potential contributions a student can bring to the community, and an
+                                    enthusiasm for learning. </p>
+                                <p>We enroll students every year to fulfill the vacant seats
+                                    available on merit base. Admission shall not be denied because of nationality,
+                                    ethnicity, gender, or religious beliefs. </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="https://kavya.edu.np/images/website/exampolicy.jpg" alt="Placeholder Image"
+                                class="w-full h-60 object-cover">
+                            <div class="p-4">
+                                <p class="text-xl font-bold mb-2">Exam Policy</p>
+                                <p class="text-gray-700">We integrate both the traditional formal exam system with
+                                    modern thematic evaluation procedure through assessing individual performances. A
+                                    series of class evaluations, observation of behavioral changes, performances in
+                                    thematic assignments will be recorded and made available in the individual roster
+                                    both manual and electronic forms..</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="https://kavya.edu.np/images/website/languageclass.jpg" alt="Placeholder Image"
+                                class="w-full h-60 object-cover">
+                            <div class="p-4">
+                                <p class="text-xl font-bold mb-2">Language class</p>
+                                <p class="text-gray-700">Kavya has introduced Chinese and German language classes as non
+                                    credit subjects where students learn Chinese and German languages, culture, and
+                                    tradition. This enables students to understand and respect other culture, develop
+                                    tolerance towards the differences and help them cross the cultural dogmatic
+                                    boundaries boundaries boundaries.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="testimonial overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4">Testimonials</h2>
+                <p class="text-gray-600">See what our students have to say</p>
+            </div>
+            <div id="testimonialCarousel" class="swiper-container">
+
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+        <!-- <div class="swiper-pagination"></div> -->
+{% for item in testimonialList%}
+                    <div class="swiper-slide p-4">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="rounded-full overflow-hidden border-4 border-cyan-500 mb-4 h-24 w-24 flex items-center justify-center">
+                                <img src="http://localhost:8000/media/{{item.image}}"alt="Student" class="h-full">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">{{item.name}}</h3>
+                            <p class="text-gray-700 py-8 text-center">{{item.content}}</p>
+                        </div>
+                    </div>
+                   {% endfor %}
+                    <!-- Add more testimonials as needed -->
+                </div>
+                
+            </div>
+            
+        </div>
+
+       
+
+
+    </div>
+
+</div>
+ <!-- Include Swiper library -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+ <script>
+     var swiper = new Swiper("#testimonialCarousel", {
+         direction: "horizontal",
+         loop: true,
+         pagination: {
+             el: ".swiper-pagination",
+             clickable: true,
+         },
+     });
+ </script>
+{% endblock content %}
