@@ -32,5 +32,5 @@ urlpatterns = [
     path('news/',news), 
 ] + static(
     settings.MEDIA_URL,
-    document_root = ""
+    document_root = settings.MEDIA_ROOT
 )
